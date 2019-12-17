@@ -23,11 +23,13 @@ def f_searcher(a):
 				print("exam might have been posponed check online")
 				beep(3)
 				winsound.Beep(2500,1000)
-			
+				return True
+	return False
 
 
 print ("enter date in format dd/mm/yyyy")
 aa=input()
 while(True):
-	f_searcher(aa)
+	if f_searcher(aa)==False :
+		print("working")
 	time.sleep(10)
